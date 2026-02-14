@@ -1,68 +1,135 @@
-Project Overview :- 
+# 📊 Retail Sales Data Analysis & Validation
 
-This project analyzes retail sales data from the Superstore dataset using Excel, SQL, and Power BI.
+---
 
-The focus was not only on analysis but also on data quality validation and cleaning before building dashboards.
+## 📌 Project Overview
 
-🔹 Step 1: Data Cleaning in Excel (Power Query)
+This project focuses on analyzing retail sales data to uncover business performance trends and generate actionable insights.
 
-1. Cleaned raw CSV data using Power Query
+The analysis emphasizes **data cleaning, validation, and business logic consistency** before building interactive dashboards.
 
-2. Removed nulls and formatted date columns
+The complete workflow was executed using **Excel (Power Query), SQL, and Power BI**, demonstrating an end-to-end analytics pipeline from raw data to executive-ready visualization.
 
-3. Created Pivot Charts to explore initial insights
+---
 
-🔹 Step 2: Data Validation in SQL
+## 🛠 Tools & Technologies Used
 
-1. Imported dataset into SQL database
+- 📗 **Excel (Power Query & Pivot Tables)** – Data cleaning and exploratory analysis  
+- 🗄 **SQL** – Data validation, anomaly detection, and view creation  
+- 📊 **Power BI** – Interactive dashboard development and KPI visualization  
 
-2. Discovered cases where ShipDate < OrderDate
+---
 
-3. Created a cleaned view filtering valid records
+## 📂 Dataset
 
-4. Ensured business logic consistency
+The dataset used in this project is the **Superstore Sales dataset**, containing transactional retail data such as:
 
-Example logic:
+- Order Date  
+- Ship Date  
+- Sales  
+- Profit  
+- Region  
+- Category  
+- Customer Segment  
 
-CREATE VIEW retail_clean AS
+---
+
+## 📁 Project Structure
+
+- `Superstore.xlsx` → Raw Retail dataset & Excel cleaning & pivot analysis  
+- `retail_sales.sql` → SQL queries & cleaned view  
+- `retail_sales_dashboard.pbix` → Power BI interactive dashboard  
+- `main-dasboard.png` → Dashboard screenshot
+- `mtd-report.png` → MTD screenshot
+-  `pivotinsight1.png`, `pivotinsight2.png`, `pivotinsight3.png`, `pivotinsight4.png`→ Pivot screenshots
+
+---
+
+## 🔎 Data Validation Process
+
+During analysis, inconsistencies were identified where:
+
+⚠ **Ship Date < Order Date**
+
+To ensure data integrity:
+
+- ✔ Data was validated using SQL  
+- ✔ A cleaned view was created filtering valid records  
+- ✔ Power BI dashboard was built using validated data only  
+
+### 🧾 Validation Logic (SQL)
+
+```sql
+CREATE VIEW retail_sales_clean AS
 SELECT *
 FROM retail_data
-WHERE ShipDate >= OrderDate;
+WHERE ShipDate >= OrderDate; 
+```
+---
 
-🔹 Step 3: Power BI Dashboard Development
+## 🔍 Key Business Insights
 
-1. Built interactive dashboard using validated data
+- 📈 Identified top-performing regions contributing the highest revenue.
+- 📊 Analyzed monthly sales and profit trends to understand year-over-year growth.
+- 🛍 Evaluated category-wise contribution to overall sales and profitability.
+- 🚚 Assessed the impact of shipping inconsistencies on reporting accuracy.
+- 👥 Compared sales performance across different customer segments.
 
-2. Applied date validation filters
+---
 
-3. Created KPIs:
+## 📊 Dashboard Preview
 
-a. Total Sales
+### 🔹 Executive Sales Dashboard
 
-b. Total Profit
+![Retail Dashboard](main-dashboard.png)
+![MTD Dashboard](mtd-report.png)
 
-c. Total Orders
+---
 
-d. Profit Margin %age
+## 📈 Dashboard Highlights
 
-e. Total Quantity
+### 🧮 KPI Cards
 
-Ensured only logically valid shipping records are displayed
+- Total Sales  
+- Total Profit  
+- Total Orders  
+- Profit Margin  
+- Total Quantity  
 
-🔹 Key Business Insights
+### 📊 Visual Analysis
 
-1. Identified top-performing regions
+- 📅 Monthly Sales Trend  
+- 🌍 Region-wise Performance  
+- 📦 Category & Sub-Category Breakdown  
+- 🎛 Interactive slicers for dynamic filtering  
 
-2. Analyzed monthly revenue trends
+---
 
-3. Evaluated impact of invalid shipping dates on reporting
+## 💡 Business Recommendations
 
-4. Demonstrated importance of data validation before visualization
+- 🎯 Focus marketing efforts on high-performing months to maximize revenue.
+- 📉 Reevaluate discount policies to protect profit margins.
+- 📦 Improve margin strategy for the Furniture category.
+- 📊 Monitor underperforming months and investigate root causes.
 
-🔹 Tools Used
+---
 
-Excel (Power Query, Pivot Tables)
+## 🚀 Outcome
 
-SQL (Data Validation & View Creation)
+This project demonstrates the ability to:
 
-Power BI (Dashboard & DAX Measures)
+✔ Perform structured data cleaning  
+✔ Detect and correct data inconsistencies  
+✔ Apply business validation logic  
+✔ Build professional interactive dashboards  
+✔ Deliver data-driven insights for data-driven decision making  
+
+---
+## Conclusion
+In this project, I analyzed retail sales performance across multiple years. I validated data quality, ensured shipping logic accuracy, and built an interactive dashboard.
+I identified that Technology is the primary revenue and profit driver, while high discounts negatively impact profitability.
+The MTD report revealed a 17% decline compared to last year, indicating seasonal and performance-based fluctuations."
+
+
+
+
